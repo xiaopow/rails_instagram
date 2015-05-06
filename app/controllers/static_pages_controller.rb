@@ -9,4 +9,6 @@ class StaticPagesController < ApplicationController
     #   lucky_numbers: numbers
     # }
   end
+  def fer
+  end
 end
