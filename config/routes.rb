@@ -14,6 +14,12 @@ Rails.application.routes.draw do
 
   get '/fer' => 'static_pages#fer'
 
+  resources :posts, :only => [:create, :show, :index, :destroy, :update]
+
+  get '/highlighted_posts' => 'posts#highlighted'
+
+  resources :comments
+
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
