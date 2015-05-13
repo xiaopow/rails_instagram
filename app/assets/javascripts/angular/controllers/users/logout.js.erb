@@ -1,0 +1,25 @@
+app.controller('LogOutCtrl',['$scope','$http','$location', function($scope, $http, $location){
+
+  $scope.form = {};
+
+  $scope.form.logout = function() {
+    console.log("logging out...");
+
+    var url = "<%= ENV['URL'] %>" || "http://localhost:3000/";
+
+    $http.delete('http://localhost:3000/users/sign_out').success(function(response){
+      console.log(response);
+    });
+  };
+
+  // $scope.form.submit = function() {
+
+  //   var url = "<%= ENV['URL'] %>" || "http://localhost:3000/";
+
+  //   $http.delete(url + 'users/sign_out').success(function(response){
+  //     console.log(response);
+  //   });
+  // };
+
+
+}]);

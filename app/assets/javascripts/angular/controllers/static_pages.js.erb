@@ -1,0 +1,16 @@
+// An AngularJS controller
+
+// $scope -> two day data binding
+// $http -> making ajax request
+// $location -> redirects in Angular
+
+app.controller('StaticPagesCtrl', ['$scope','$http','$location', function($scope, $http, $location){
+  console.log("This StaticPagesCtrl is working");
+
+  $scope.foobar = function(){
+    $http.get('http://www.omdbapi.com/?t='+$scope.movieTitle).success(function(response){
+      $scope.movie = response;
+    });
+  };
+
+}]);
