@@ -50,6 +50,8 @@ GEM
     bootstrap-sass (3.3.4.1)
       autoprefixer-rails (>= 5.0.0.1)
       sass (>= 3.2.19)
+    bower (0.0.5)
+      multi_json
     builder (3.2.2)
     byebug (4.0.5)
       columnize (= 0.9.0)
@@ -168,6 +170,7 @@ DEPENDENCIES
   better_errors
   binding_of_caller
   bootstrap-sass (~> 3.3.0)
+  bower
   byebug
   coffee-rails (~> 4.1.0)
   devise
